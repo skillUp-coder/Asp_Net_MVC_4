@@ -1,0 +1,5 @@
+C:\Users\0x280\source\repos\epam_task_4\epam_task_4_data\bin\Debug\epam_task_4_data.dll
+C:\Users\0x280\source\repos\epam_task_4\epam_task_4_data\bin\Debug\epam_task_4_data.pdb
+C:\Users\0x280\source\repos\epam_task_4\epam_task_4_data\obj\Debug\epam_task_4_data.csprojAssemblyReference.cache
+C:\Users\0x280\source\repos\epam_task_4\epam_task_4_data\obj\Debug\epam_task_4_data.dll
+C:\Users\0x280\source\repos\epam_task_4\epam_task_4_data\obj\Debug\epam_task_4_data.pdb

@@ -1,0 +1,29 @@
+﻿@model epam_task_4_data.Entities.FeedBackData
+@{
+    ViewBag.Title = "Delete";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <main class="container">
+
+            <div class="list-group-item">
+                @using (Html.BeginForm(FormMethod.Post))
+                {
+                    @Html.DisplayFor(x => x.Name)
+                    <br/>
+                    @Html.DisplayFor(x => x.Message)
+                    <br/>
+                    <input type="submit" name="Delete" value="Delete" />
+                }
+
+
+            </div>
+
+        </main>
+    </body>
+    </html>    
+

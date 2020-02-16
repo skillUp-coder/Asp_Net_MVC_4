@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "My Blog";
+}
+
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content=""/>
+        <title></title>
+        @Html.Raw(ViewBag.LoadMetaTag)
+    </head>
+    <body>
+        <main class="container ">
+
+            <div class="row" style="margin-top:30px">
+                <div class="col-lg-8" >
+                    <div class="list-group-item ">
+                        @foreach (var item in ViewBag.Articles)
+                        {
+                            <p>@item.Title</p>
+                            <p>@item.Author</p>
+                            <p>@item.Text</p>
+                            <p><a href="~/Home/AddFeedback/@item.ArticleId">Add Comment</a></p>
+                            using (Html.BeginForm("Article_f", "Home"))
+                            {
+                                <fieldset>
+                                    <p><a href="~/Home/Article_f/@item.ArticleId">+</a></p>
+                                </fieldset>
+                            }
+
+                        }
+                    </div>
+                </div>
+
+                <div class="col-lg-4 ">
+                    <ul class="float-lg-right">
+                        <li class="list-group-item nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Home
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="~/Home/ArticlesPage">Articles</a>
+                                <a class="dropdown-item nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Menu</a>
+                                <div class="dropdown-menu">
+                                    <a href="~/Home/Index" class="dropdown-item">Home</a>
+                                    <a href="~/FeedBack/AddFeedBack" class="dropdown-item">Feedback</a>
+                                    <a href="~/Questionnaire/AddQuestions" class="dropdown-item">Profile</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="float-lg-right">
+                            @using (Html.BeginForm("Marks", "Home", FormMethod.Get))
+                            {
+                            <fieldset>
+                                <label>Choose a rating for this site</label>
+                                <br />
+                                <input type="checkbox" name="mark" value=5 />
+                                <span>5</span><br />
+                                <input type="checkbox" name="mark" value=4 />
+                                <span>4</span><br />
+                                <input type="checkbox" name="mark" value=3 />
+                                <span>3</span><br />
+                                <input type="checkbox" name="mark" value=2 />
+                                <span>2</span><br />
+                                <input type="checkbox" name="mark" value=1 />
+                                <span>1</span><br />
+                                <input type="submit" name="Send" value="Send" />
+                            </fieldset>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </body>
+    </html>

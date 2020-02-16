@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Display_FeedBack";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <main class="container">
+            @foreach (var item in ViewBag.AllData) 
+            {
+
+                <div class="list-group-item">
+                    <p>@item.Name</p>
+                    <p>@item.Message</p>
+                    <p><a href="~/Home/Edit/@item.FeedBackDataId">Edit</a></p>
+                    <p><a href="~/Home/Delete/@item.FeedBackDataId">Delete</a></p>
+                    
+                </div>
+            }
+        
+
+        </main>
+    </body>
+    </html>
+

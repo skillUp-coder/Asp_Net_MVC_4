@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "AddFeedback";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <main class="container">
+            <div class="list-group-item ">
+
+
+                @using (Html.BeginForm(FormMethod.Post))
+                {
+                    <input type="hidden" name="ArticleId" value="@ViewBag.IdArticles" />
+                    <p>Your name: </p>
+                    @Html.TextBox("Name")
+                    <p>Message: </p>
+                    @Html.TextBox("Message")
+                    <input type="submit" name="Add" value="Add" />
+                }
+            </div>
+
+            <div style="height: 100px;"></div>
+
+
+            
+
+
+
+
+            <div class="list-group-item">
+                
+                    
+            </div>
+        </main>
+    </body>
+    </html>
+

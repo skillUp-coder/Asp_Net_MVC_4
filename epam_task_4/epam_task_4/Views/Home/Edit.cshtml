@@ -1,0 +1,29 @@
+﻿@model epam_task_4_data.Entities.FeedBackData
+@{
+    ViewBag.Title = "Edit";
+}
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        @using (Html.BeginForm(FormMethod.Post)) 
+        {
+            <fieldset>
+                @Html.HiddenFor(x=>x.FeedBackDataId)
+                @Html.LabelFor(x=>x.Name)
+                @Html.EditorFor(x=>x.Name)
+                <br/>
+                @Html.LabelFor(x=>x.Message)
+                @Html.EditorFor(x=>x.Message)
+                <br/>
+                <input type="submit" name="Edit" value="Edit" />
+
+            </fieldset>
+
+        }
+    
+    </body>
+    </html>
+
